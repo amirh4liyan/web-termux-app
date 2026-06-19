@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <title>Exams</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <table> 
+
+            <thead>
+                <tr>
+                    <th>تاریخ</th>
+                    <th>نام درس</th>
+                    <th>واحد</th>
+                    <th>استاد</th>
+                    <th>روز امتحان</th>
+                    <th>ساعت امتحان</th>
+                    <th>کد</th>
+                    <th>گروه</th>
+                    <th>حذف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>۱۴۰۵/۰۳/۲۸</td>
+                    <td>برنامه نویسی وب</td>
+                    <td>3</td>
+                    <td>سعادت ایزدی</td>
+                    <td>پنجشنبه</td>
+                    <td>۱۰:۳۰-۱۲:۳۰</td>
+                    <td>1102100</td>
+                    <td>1</td>
+                    <td><button><strong>✕</strong></button></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۳/۲۹</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>جمعه</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۳/۳۰</td>
+                    <td>روش پژوهش و ارائه</td>
+                    <td>2</td>
+                    <td>سجاد احمدیان</td>
+                    <td>شنبه</td>
+                    <td>۱۰:۳۰-۱۲:۳۰</td>
+                    <td>1102063</td>
+                    <td>1</td>
+                    <td><button><strong>✕</strong></button></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۳/۳۱</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>یکشنبه</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>                
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۱</td>
+                    <td>ريز پردازنده و زبان اسمبلي</td>
+                    <td>3</td>
+                    <td>مریم تقی‌زاده</td>
+                    <td>دوشنبه</td>
+                    <td>۱۰:۳۰-۱۲:۳۰</td>
+                    <td>1102067</td>
+                    <td>1</td>
+                    <td><button><strong>✕</strong></button></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۲</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>سه‌شنبه</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۳</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>چهارشنبه</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۴</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>پنج‌شنبه</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۵</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>۱۴۰۵/۰۴/۰۶</td>
+                    <td>مبانی وكاربردهای هوش مصنوعی</td>
+                    <td>3</td>
+                    <td>وحید قاسمی</td>
+                    <td>شنبه</td>
+                    <td>۰۸:۰۰-۱۰:۰۰</td>
+                    <td>1102101</td>
+                    <td>1</td>
+                    <td><button><strong>✕</strong></button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>جمع</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>  
+        <script>
+    let sum = 0;
+    let rows = document.querySelectorAll('tbody tr');
+    
+    rows.forEach((row, index) => {
+        if (index === rows.length - 1) return; 
+        
+        let courseName = row.children[1].textContent.trim();
+        let unitText = row.children[2].textContent.trim();
+        
+        if (courseName !== "") {
+            let unitValue = parseFloat(unitText.replace(/[٠-٩]/g, d => d.charCodeAt(0) - 1632).replace(/[۰-۹]/g, d => d.charCodeAt(0) - 1776));
+            if (!isNaN(unitValue)) {
+                sum += unitValue;
+            }
+        }
+    });
+    
+    rows[rows.length - 1].children[2].textContent = sum;
+</script>
+
+    </body>
+</html>

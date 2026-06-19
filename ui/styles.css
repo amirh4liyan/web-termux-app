@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'main-font';
+  src: url('fonts/vazirmatn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+body {
+  background-color: #111b4d;
+  font-family: 'main-font'; 
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  border: solid white 2px;
+  padding: 30px;
+  margin: 50px;
+}
+
+p {
+  color: green;
+  text-align: center;
+  background-color: cadetblue;
+
+}
+
+table {
+    margin: 40px auto; 
+    width: 65%; 
+    border-collapse: separate;
+    border-spacing: 0; 
+    
+    border: 2px solid #2a4e91; 
+    border-radius: 12px;
+    overflow: hidden; 
+}
+
+th {
+    text-align: center;
+    background-color: #2a4e91;
+    color: white;
+    padding: 12px;
+    border-bottom: 2px solid #111b4d; 
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid #2a4e91;
+    color: white;
+    padding: 12px; 
+} 
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    text-align: left;
+}
+
+button {
+    font-family: 'main-font', Arial, main-font-serif;
+}
