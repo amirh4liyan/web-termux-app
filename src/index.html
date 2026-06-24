@@ -8,21 +8,22 @@
 <body class="flex flex-col p-10 gap-10 items-center justify-center bg-indigo-950">
 
 <div class="inline-flex rounded-base -space-x-px " role="group">
-  <button type="button" onclick="document.getElementById('content').src='login.html'" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-lg px-3 py-2 focus:outline-none w-48 bg-pink-500 text-white">
+  <button type="button" onclick="document.getElementById('content').src='/src/login.html'" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-lg px-3 py-2 focus:outline-none focus:bg-pink-700 w-48 bg-pink-500 text-white">
     Login
   </button>
-  <button type="button" onclick="document.getElementById('content').src='final.html'"class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-lg px-3 py-2 focus:outline-none w-48 bg-pink-500 text-white">
+  <button type="button" onclick="document.getElementById('content').src='/src/final.html'"class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-lg px-3 py-2 focus:outline-none focus:bg-pink-700 w-48 bg-pink-500 text-white">
     Final Exam
   </button>
-  <button type="button" onclick="document.getElementById('content').src='list.html'" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-e-base text-lg px-3 py-2 focus:outline-none w-48 bg-pink-500 text-white">
+  <button type="button" onclick="document.getElementById('content').src='/src/about.html'" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-e-base text-lg px-3 py-2 focus:outline-none focus:bg-pink-700 w-48 bg-pink-500 text-white">
     About Us
   </button>
 </div>
 
-<div class="flex w-full rounded-xl bg-white shadow-lg">
+<div class="flex w-full rounded-xl bg-white">
     <iframe
         id="content"
-        class="w-full h-[790px] rounded-xl shadow-lg"
+	src="/src/login.html"
+        class="w-full h-[790px] rounded-xl"
     ></iframe>
 </div>
 
