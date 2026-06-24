@@ -1708,9 +1708,6 @@
       background-color: color-mix(in oklab, var(--color-gray-900) 50%, transparent);
     }
   }
-  .bg-indigo-100 {
-    background-color: var(--color-indigo-100);
-  }
   .bg-indigo-950 {
     background-color: var(--color-indigo-950);
   }
@@ -2044,8 +2041,8 @@
   .text-heading {
     color: var(--color-heading);
   }
-  .text-indigo-500 {
-    color: var(--color-indigo-500);
+  .text-rose-100 {
+    color: var(--color-rose-100);
   }
   .text-white {
     color: var(--color-white);
@@ -2207,10 +2204,10 @@
       }
     }
   }
-  .hover\:text-indigo-400 {
+  .hover\:text-rose-200 {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-indigo-400);
+        color: var(--color-rose-200);
       }
     }
   }
