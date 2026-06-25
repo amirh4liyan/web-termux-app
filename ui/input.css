@@ -6,6 +6,11 @@
 @source "../src/*.html";
 @source "../node_modules/flowbite";
 
+@theme {
+    --color-primary: #0d3b66;
+    --color-primary-light: #10497f;
+}
+
 @font-face {
   font-family: 'main-font';
   src: url('fonts/vazirmatn.ttf') format('truetype');
